@@ -1,3 +1,8 @@
 h1 {
   color: #0098db;
 }
+.btn-primary {
+  color: #fff;
+  background-color: #e6855c;
+  border-color: #e6855c;
+}
