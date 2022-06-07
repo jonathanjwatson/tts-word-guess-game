@@ -64,6 +64,7 @@ function addWordToGuess() {
 }
 
 function generateLetterBank() {
+  letterBankDiv.innerHTML = "";
   for (let i = 0; i < letters.length; i++) {
     const newDiv = document.createElement("div");
     const newButton = document.createElement("button");
