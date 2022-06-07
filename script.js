@@ -30,6 +30,7 @@ const letters = [
   "z",
 ];
 const wordToGuess = ["b", "a", "n", "a", "n", "a"];
+const wordToDisplay = wordToGuess.map(() => "_");
 
 // DOM Variables
 const wordToGuessDiv = document.getElementById("word-to-guess");
@@ -37,13 +38,14 @@ const letterBankDiv = document.getElementById("letter-bank");
 
 // Function Definitions
 function addWordToGuess() {
-  for (let i = 0; i < wordToGuess.length; i++) {
+  wordToGuessDiv.innerHTML = "";
+  for (let i = 0; i < wordToDisplay.length; i++) {
     // 1. Create a new element.
     const newDiv = document.createElement("div");
     const newH1 = document.createElement("h1");
     // 2. Add content
     newDiv.className = "col";
-    newH1.innerText = "_";
+    newH1.innerText = wordToDisplay[i];
     // 3. Append to an existing element
     newDiv.append(newH1);
     wordToGuessDiv.append(newDiv);
@@ -67,3 +69,22 @@ function generateLetterBank() {
 addWordToGuess();
 generateLetterBank();
 // Event Listeners
+
+letterBankDiv.addEventListener("click", (evt) => {
+  if (evt.target.type === "submit") {
+    // TODO: Do something here.
+    console.log("You clicked my buttons!");
+    console.log(evt.target.innerText);
+    console.log(evt.target.type);
+    // TODO: If letter is in the word, display it in the word.
+    for (let i = 0; i < wordToGuess.length; i++) {
+      if (evt.target.innerText === wordToGuess[i]) {
+        console.log("That letter is in the word!");
+        wordToDisplay[i] = evt.target.innerText;
+        console.log(wordToDisplay);
+      }
+    }
+    addWordToGuess();
+    // TODO: If letter is not in the word (figure out the incorrect letters)
+  }
+});
