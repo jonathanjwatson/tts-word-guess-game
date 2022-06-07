@@ -6,3 +6,17 @@ h1 {
   background-color: #e6855c;
   border-color: #e6855c;
 }
+
+.btn-primary:hover {
+  color: #000;
+  background-color: #f7d02f;
+  border-color: #f7d02f;
+}
+
+h1.wrong {
+  color: red;
+}
+
+h3.wrong {
+    color: red;
+  }

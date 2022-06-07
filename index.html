@@ -24,17 +24,42 @@
 
     <p>Write the instructions here.</p>
 
+    <!-- The Current Word to Guess -->
     <div class="container">
       <div class="row text-center" id="word-to-guess"></div>
     </div>
 
-    <p>Display incorrect letters here.</p>
-
+    <!-- Container for the Letter Bank Buttons -->
     <div class="container">
       <div
         class="row d-flex text-center justify-content-center"
         id="letter-bank"
       ></div>
+    </div>
+
+    <!-- Game Results -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 id="game-result"></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Incorrect Letters -->
+    <div class="container">
+      <div class="row text-center">
+        <h3 class="wrong">Wrong Letters</h3>
+      </div>
+      <div class="row text-left" id="wrong-letters"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-info" id="new-game-button">New Game</button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
